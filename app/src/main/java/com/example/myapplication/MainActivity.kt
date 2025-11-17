@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.LoginFilter.UsernameFilterGMail
 import android.widget.Button
@@ -42,6 +43,14 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
+
+        val buttonDaftar = findViewById<Button>(R.id.buttondaftar)
+        buttonDaftar.setOnClickListener {
+            val intentPindahPendaftaran = Intent(this, PendaftaranActivity::class.java)
+            startActivity(intentPindahPendaftaran)
+            finish()
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
