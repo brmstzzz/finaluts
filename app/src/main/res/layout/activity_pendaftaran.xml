@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="16sp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,10 +14,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:text="Formulir Pendaftaran"
-        android:textColor="#FF5722"
-        android:textSize="24sp"
+        android:textColor="#E43F3F"
+        android:textSize="26sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username" />
 
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Input Username"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,22 +41,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Email"
+        android:hint="***abc@gmail.com"
         android:inputType="textEmailAddress"
         android:minHeight="48dp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:weightSum="2">
 
+        <!-- Kolom Nama Depan -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginEnd="8dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,9 +77,9 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,6 +94,7 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
         </LinearLayout>
+
     </LinearLayout>
 
     <TextView
@@ -91,39 +107,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Password"
+        android:hint="Input Pasword"
         android:inputType="textPassword"
         android:minHeight="48dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ketik Ulang Password" />
 
     <EditText
-        android:id="@+id/repeatPassword"
+        android:id="@+id/edit_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Ketik Ulang Password"
+        android:hint="Ketik Ulang Pasword"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        tools:ignore="DuplicateIds" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#19EF20"
-        android:text="Kirim"
-        android:textColor="#FFFFFF" />
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E40000"
-        android:text="Batal"
-        android:textColor="#FFFFFF" />
+        android:backgroundTint="#DC4E4E"
+        android:text="Batal" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="Kirim" />
+
 
 </LinearLayout>
